@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "jisu-blog",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 6, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 3, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "팔머 펭귄 데이터 분석\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 6, 2025\n\n\n–\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 3, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
     "href": "posts/post-with-code/index.html",
     "title": "Post With Code",
     "section": "",
-    "text": "This is a post with executable code.\n\nimport numpy as np\n\na = np.arange(10)\na\n\narray([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])"
+    "text": "This is a post with executable code."
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -19,5 +19,40 @@
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/Palmerpenguins_analysis/palmerpenguins.html#펭귄-종류-확인",
+    "href": "posts/Palmerpenguins_analysis/palmerpenguins.html#펭귄-종류-확인",
+    "title": "팔머 펭귄 데이터 분석",
+    "section": "",
+    "text": "Code\nfrom palmerpenguins import load_penguins\npenguins = load_penguins()\npenguins.loc[:, 'species'].unique()\n\n\narray(['Adelie', 'Gentoo', 'Chinstrap'], dtype=object)\n\n\nㄴ&gt; 펭귄 종류는 총 3가지가 있다.\n\nAdelie\n\n\n\nChinstrap\n\n\n\nGentoo"
+  },
+  {
+    "objectID": "posts/Palmerpenguins_analysis/palmerpenguins.html#종별-개체-수",
+    "href": "posts/Palmerpenguins_analysis/palmerpenguins.html#종별-개체-수",
+    "title": "팔머 펭귄 데이터 분석",
+    "section": "2 2. 종별 개체 수",
+    "text": "2 2. 종별 개체 수\n\n\nAdelie 개체 수: 152 마리 \nChinstrap 개체 수: 68 마리 \nGentoo 개체 수: 124 마리\n\n\nㄴ&gt; 개체 수는 Adelie 종이 152 마리로 가장 많은 것을 알 수 있다."
+  },
+  {
+    "objectID": "posts/Palmerpenguins_analysis/palmerpenguins.html#평균값에-따른-종별-특징",
+    "href": "posts/Palmerpenguins_analysis/palmerpenguins.html#평균값에-따른-종별-특징",
+    "title": "팔머 펭귄 데이터 분석",
+    "section": "3 3. 평균값에 따른 종별 특징",
+    "text": "3 3. 평균값에 따른 종별 특징\n\n\n\n\n\n\n\n\n\n종\n부리 길이\n부리 깊이\n날개 길이\n몸무게\n수집 연도\n\n\n\n\n0\nAdelie\n38.79\n18.35\n189.95\n3700.66\n2008.01\n\n\n1\nChinstrap\n48.83\n18.42\n195.82\n3733.09\n2007.97\n\n\n2\nGentoo\n47.50\n14.98\n217.19\n5076.02\n2008.08\n\n\n\n\n\n\n\n\n부리의 길이 (bill_length_mm)\n\n부리의 길이는 Chinstrap 종이 제일 길다.\n\nChinstrap &gt; Gentoo &gt; Adelie\n\n\n부리의 깊이 (bill_depth_mm)\n\n부리의 깊이는 Chinstrap 종이 제일 깊다.\n\nChinstrap &gt; Adelie &gt; Gentoo\n\n\n날개의 길이 (flipper_length_mm)\n\n날개의 길이는 Gentoo 종이 제일 길다.\n\nGentoo &gt; Chinstrap &gt; Adelie\n\n\n몸무게 (body_mass_g)\n\n몸무게는 Gentoo 종이 제일 많이 나간다.\n\nGentoo &gt; Chinstrap &gt; Adelie"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/Palmerpenguins_analysis/palmerpenguins.html",
+    "href": "posts/Palmerpenguins_analysis/palmerpenguins.html",
+    "title": "팔머 펭귄 데이터 분석",
+    "section": "",
+    "text": "Code\nfrom palmerpenguins import load_penguins\npenguins = load_penguins()\npenguins.loc[:, 'species'].unique()\n\n\narray(['Adelie', 'Gentoo', 'Chinstrap'], dtype=object)\n\n\nㄴ&gt; 펭귄 종류는 총 3가지가 있다.\n\nAdelie\n\n\n\nChinstrap\n\n\n\nGentoo"
   }
 ]
