@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>팔머 펭귄 데이터 분석 – jisu-blog</title>
+<title>Palmerpenguins Analysis – jisu-blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -153,7 +153,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">팔머 펭귄 데이터 분석</h1>
+      <h1 class="title">Palmerpenguins Analysis</h1>
                       </div>
   </div>
     
@@ -187,16 +187,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<p>팔머펭귄 데이터 분석 실습</p>
+<p><br></p>
 <section id="펭귄-종류-확인" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="펭귄-종류-확인"><span class="header-section-number">1</span> 1. 펭귄 종류 확인</h2>
-<div id="158e40c9" class="cell" data-execution_count="1">
+<div id="c90b764b" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> palmerpenguins <span class="im">import</span> load_penguins</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>penguins <span class="op">=</span> load_penguins()</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>penguins.loc[:, <span class="st">'species'</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>array(['Adelie', 'Gentoo', 'Chinstrap'], dtype=object)</code></pre>
 </div>
 </div>
@@ -217,7 +219,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="종별-개체-수" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="종별-개체-수"><span class="header-section-number">2</span> 2. 종별 개체 수</h2>
-<div id="4edc74bd" class="cell" data-execution_count="2">
+<div id="cbc4e6f2" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Adelie <span class="op">=</span> penguins.loc[penguins[<span class="st">'species'</span>]<span class="op">==</span><span class="st">'Adelie'</span>]</span>
@@ -237,14 +239,14 @@ Gentoo 개체 수: 124 마리</code></pre>
 </section>
 <section id="평균값에-따른-종별-특징" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="평균값에-따른-종별-특징"><span class="header-section-number">3</span> 3. 평균값에 따른 종별 특징</h2>
-<div id="c51321c8" class="cell" data-execution_count="3">
+<div id="b988f2bb" class="cell" data-execution_count="3">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Mean <span class="op">=</span> penguins.groupby(<span class="st">'species'</span>, as_index<span class="op">=</span><span class="va">False</span>).mean(numeric_only<span class="op">=</span><span class="va">True</span>).<span class="bu">round</span>(<span class="dv">2</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Mean.columns <span class="op">=</span> [<span class="st">'종'</span>, <span class="st">'부리 길이'</span>, <span class="st">'부리 깊이'</span>, <span class="st">'날개 길이'</span>, <span class="st">'몸무게'</span>, <span class="st">'수집 연도'</span>]</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Mean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="18">
 <div>
 
 

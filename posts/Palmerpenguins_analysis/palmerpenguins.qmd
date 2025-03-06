@@ -1,5 +1,5 @@
 ---
-title: "팔머 펭귄 데이터 분석"
+title: "Palmerpenguins Analysis"
 format: 
   html:
     toc: True
@@ -9,6 +9,9 @@ format:
 jupyter: python3
 ---
 
+팔머펭귄 데이터 분석 실습
+
+<br>
 
 ## 1. 펭귄 종류 확인
 
