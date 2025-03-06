@@ -1,0 +1,85 @@
+---
+title: "팔머 펭귄 데이터 분석"
+format: 
+  html:
+    toc: True
+    number-sections: true
+    code-fold: show
+    highlight-style: breeze
+jupyter: python3
+---
+
+<br>
+
+## 1. 펭귄 종류 확인
+
+```{python}
+from palmerpenguins import load_penguins
+penguins = load_penguins()
+penguins.loc[:, 'species'].unique()
+```
+
+ㄴ\> 펭귄 종류는 총 **3가지**가 있다.
+
+-   Adelie
+
+![](https://www.oceanlight.com/stock-photo/pygoscelis-adeliae-adelie-penguin-antarctica-photograph-25015-476837.jpg)
+
+-   Chinstrap
+
+![](https://cdn.prod.website-files.com/663b14d8b3ed91cb605fc95e/6672886d9b75d704fb86a233_chinstrap-penguin.png)
+
+-   Gentoo
+
+![](https://www.voyagers.travel/_ipx/w_2400&f_webp&q_85/google/travel-web-app-1.appspot.com/flamelink/media/Gentoo%20Penguin%20-%20Canva%20-%20jtstewartphoto.jpg%3Falt=media)
+
+<br>
+
+## 2. 종별 개체 수
+
+```{python}
+#| echo: false
+Adelie = penguins.loc[penguins['species']=='Adelie']
+Chinstrap = penguins.loc[penguins['species']=='Chinstrap']
+Gentoo = penguins.loc[penguins['species']=='Gentoo']
+
+print("Adelie 개체 수:", Adelie.shape[0],"마리", "\nChinstrap 개체 수:", Chinstrap.shape[0],"마리", "\nGentoo 개체 수:", Gentoo.shape[0],"마리")
+```
+
+ㄴ\> 개체 수는 **Adelie 종**이 **152 마리**로 가장 많은 것을 알 수 있다.
+
+<br>
+
+## 3. 평균값에 따른 종별 특징
+
+```{python}
+#| echo: false
+Mean = penguins.groupby('species', as_index=False).mean(numeric_only=True).round(2)
+Mean.columns = ['종', '부리 길이', '부리 깊이', '날개 길이', '몸무게', '수집 연도']
+Mean
+```
+
+1.  부리의 길이 (bill_length_mm)
+
+    -   부리의 길이는 Chinstrap 종이 제일 길다.
+        -   Chinstrap \> Gentoo \> Adelie
+
+2.  부리의 깊이 (bill_depth_mm)
+
+    -   부리의 깊이는 Chinstrap 종이 제일 깊다.
+        -   Chinstrap \> Adelie \> Gentoo
+
+3.  날개의 길이 (flipper_length_mm)
+
+    -   날개의 길이는 Gentoo 종이 제일 길다.
+        -   Gentoo \> Chinstrap \> Adelie
+
+4.  몸무게 (body_mass_g)
+
+    -   몸무게는 Gentoo 종이 제일 많이 나간다.
+        -   Gentoo \> Chinstrap \> Adelie
+
+
+
+<br>
+<br>
