@@ -37,7 +37,6 @@ penguins.loc[:, 'species'].unique()
 ## 2. 종별 개체 수
 
 ```{python}
-#| echo: false
 Adelie = penguins.loc[penguins['species']=='Adelie']
 Chinstrap = penguins.loc[penguins['species']=='Chinstrap']
 Gentoo = penguins.loc[penguins['species']=='Gentoo']
@@ -52,7 +51,6 @@ print("Adelie 개체 수:", Adelie.shape[0],"마리", "\nChinstrap 개체 수:",
 ## 3. 평균값에 따른 종별 특징
 
 ```{python}
-#| echo: false
 Mean = penguins.groupby('species', as_index=False).mean(numeric_only=True).round(2)
 Mean.columns = ['종', '부리 길이', '부리 깊이', '날개 길이', '몸무게', '수집 연도']
 Mean

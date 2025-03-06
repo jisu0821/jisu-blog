@@ -32,14 +32,14 @@
     "href": "posts/Palmerpenguins_analysis/palmerpenguins.html#종별-개체-수",
     "title": "팔머 펭귄 데이터 분석",
     "section": "2 2. 종별 개체 수",
-    "text": "2 2. 종별 개체 수\n\n\nAdelie 개체 수: 152 마리 \nChinstrap 개체 수: 68 마리 \nGentoo 개체 수: 124 마리\n\n\nㄴ&gt; 개체 수는 Adelie 종이 152 마리로 가장 많은 것을 알 수 있다."
+    "text": "2 2. 종별 개체 수\n\n\nCode\nAdelie = penguins.loc[penguins['species']=='Adelie']\nChinstrap = penguins.loc[penguins['species']=='Chinstrap']\nGentoo = penguins.loc[penguins['species']=='Gentoo']\n\nprint(\"Adelie 개체 수:\", Adelie.shape[0],\"마리\", \"\\nChinstrap 개체 수:\", Chinstrap.shape[0],\"마리\", \"\\nGentoo 개체 수:\", Gentoo.shape[0],\"마리\")\n\n\nAdelie 개체 수: 152 마리 \nChinstrap 개체 수: 68 마리 \nGentoo 개체 수: 124 마리\n\n\nㄴ&gt; 개체 수는 Adelie 종이 152 마리로 가장 많은 것을 알 수 있다."
   },
   {
     "objectID": "posts/Palmerpenguins_analysis/palmerpenguins.html#평균값에-따른-종별-특징",
     "href": "posts/Palmerpenguins_analysis/palmerpenguins.html#평균값에-따른-종별-특징",
     "title": "팔머 펭귄 데이터 분석",
     "section": "3 3. 평균값에 따른 종별 특징",
-    "text": "3 3. 평균값에 따른 종별 특징\n\n\n\n\n\n\n\n\n\n종\n부리 길이\n부리 깊이\n날개 길이\n몸무게\n수집 연도\n\n\n\n\n0\nAdelie\n38.79\n18.35\n189.95\n3700.66\n2008.01\n\n\n1\nChinstrap\n48.83\n18.42\n195.82\n3733.09\n2007.97\n\n\n2\nGentoo\n47.50\n14.98\n217.19\n5076.02\n2008.08\n\n\n\n\n\n\n\n\n부리의 길이 (bill_length_mm)\n\n부리의 길이는 Chinstrap 종이 제일 길다.\n\nChinstrap &gt; Gentoo &gt; Adelie\n\n\n부리의 깊이 (bill_depth_mm)\n\n부리의 깊이는 Chinstrap 종이 제일 깊다.\n\nChinstrap &gt; Adelie &gt; Gentoo\n\n\n날개의 길이 (flipper_length_mm)\n\n날개의 길이는 Gentoo 종이 제일 길다.\n\nGentoo &gt; Chinstrap &gt; Adelie\n\n\n몸무게 (body_mass_g)\n\n몸무게는 Gentoo 종이 제일 많이 나간다.\n\nGentoo &gt; Chinstrap &gt; Adelie"
+    "text": "3 3. 평균값에 따른 종별 특징\n\n\nCode\nMean = penguins.groupby('species', as_index=False).mean(numeric_only=True).round(2)\nMean.columns = ['종', '부리 길이', '부리 깊이', '날개 길이', '몸무게', '수집 연도']\nMean\n\n\n\n\n\n\n\n\n\n종\n부리 길이\n부리 깊이\n날개 길이\n몸무게\n수집 연도\n\n\n\n\n0\nAdelie\n38.79\n18.35\n189.95\n3700.66\n2008.01\n\n\n1\nChinstrap\n48.83\n18.42\n195.82\n3733.09\n2007.97\n\n\n2\nGentoo\n47.50\n14.98\n217.19\n5076.02\n2008.08\n\n\n\n\n\n\n\n\n부리의 길이 (bill_length_mm)\n\n부리의 길이는 Chinstrap 종이 제일 길다.\n\nChinstrap &gt; Gentoo &gt; Adelie\n\n\n부리의 깊이 (bill_depth_mm)\n\n부리의 깊이는 Chinstrap 종이 제일 깊다.\n\nChinstrap &gt; Adelie &gt; Gentoo\n\n\n날개의 길이 (flipper_length_mm)\n\n날개의 길이는 Gentoo 종이 제일 길다.\n\nGentoo &gt; Chinstrap &gt; Adelie\n\n\n몸무게 (body_mass_g)\n\n몸무게는 Gentoo 종이 제일 많이 나간다.\n\nGentoo &gt; Chinstrap &gt; Adelie"
   },
   {
     "objectID": "about.html",
