@@ -1,5 +1,7 @@
 ---
 title: "Palmerpenguins Analysis"
+author: "한지수"
+date: "2025-03-06"
 format: 
   html:
     toc: True
@@ -7,6 +9,7 @@ format:
     code-fold: show
     highlight-style: breeze
 jupyter: python3
+image: "palmerpenguins.jpg"
 ---
 
 팔머펭귄 데이터 분석 실습
